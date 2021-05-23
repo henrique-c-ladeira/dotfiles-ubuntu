@@ -3,11 +3,15 @@
 [WIP]
 dotfiles project
 
-Go to your home folder
+Before install
 ```
-git clone https://github.com/henrique-c-ladeira/dotfiles-ubuntu .dotfiles
+sudo apt update; sudo apt install git zsh vim curl -y
 ```
-Then
+Clone repository
 ```
-cd .dotfiles && ./install
+git clone https://github.com/henrique-c-ladeira/dotfiles-ubuntu ~/.dotfiles
+```
+Dotbot install
+```
+~/.dotfiles/install
 ```
