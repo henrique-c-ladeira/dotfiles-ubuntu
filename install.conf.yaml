@@ -12,5 +12,10 @@
 - create:
     - ~/dev  
 
-- shell:        
-    - [sudo apt install bat, Installing bat...] 
+- shell:
+    - 
+      command: ./node_setup.zsh
+      stdout: true
+      stderr: true        
+    - [sudo apt install bat, Installing bat...]
+    - [sudo snap install --classic code, Installing Visual Code Studio...] 
