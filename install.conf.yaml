@@ -11,5 +11,8 @@
 - create:
     - ~/dev  
 
-# - shell:
-# - [git submodule update --init --recursive, Installing submodules]
+- shell:
+    - 
+      command: ./zsh_setup
+      stdout: true
+      srderr: true
