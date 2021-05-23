@@ -9,5 +9,5 @@ git clone https://github.com/henrique-c-ladeira/dotfiles-ubuntu .dotfiles
 ```
 Then
 ```
-cd .dorfiles && ./install
+cd .dotfiles && ./install
 ```
