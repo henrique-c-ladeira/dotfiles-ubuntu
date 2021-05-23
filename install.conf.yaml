@@ -4,10 +4,9 @@
 
 - clean: ['~']
 
-# - link:
-#    ~/.tmux.conf: tmux.conf
-#    ~/.vim: vim
-#    ~/.vimrc: vimrc
+- link:
+#    ~/.vim:
+    ~/.zshrc:
 
 - create:
     - ~/dev  
