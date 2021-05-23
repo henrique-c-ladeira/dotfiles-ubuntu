@@ -7,12 +7,10 @@
 - link:
 #    ~/.vim:
     ~/.zshrc:
+    ~/.gitconfig:
 
 - create:
     - ~/dev  
 
-- shell:
-    - 
-      command: ./zsh_setup
-      stdout: true
-      srderr: true
+- shell:        
+    - [sudo apt install bat, Installing bat...] 

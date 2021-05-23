@@ -1,7 +1,0 @@
-#!/bin/bash
-
-echo "\n << zsh setup >>\n"
-
-sudo apt install zsh
-
-source ~/.zshrc
