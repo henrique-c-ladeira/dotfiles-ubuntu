@@ -15,3 +15,6 @@ Dotbot install
 ```
 ~/.dotfiles/install
 ```
+
+## TODO List
+ - Add Android Studio setup
