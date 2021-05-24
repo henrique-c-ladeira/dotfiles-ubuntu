@@ -10,12 +10,17 @@
     ~/.gitconfig:
 
 - create:
-    - ~/dev  
+    - ~/dev
+    - ~/Android/Sdk  
 
 - shell:
     - 
       command: ./setup/node.zsh
       stdout: true
-      stderr: true        
+      stderr: true
+    - 
+      command: ./setup/jdk.zsh
+      stdout: true
+      stderr: true
     - [sudo apt install bat, Installing bat...]
     - [sudo snap install --classic code, Installing Visual Code Studio...] 
