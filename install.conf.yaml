@@ -14,7 +14,7 @@
 
 - shell:
     - 
-      command: ./node_setup.zsh
+      command: ./setup/node.zsh
       stdout: true
       stderr: true        
     - [sudo apt install bat, Installing bat...]

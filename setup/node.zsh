@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+echo "===NODE SETUP==="
+
 sudo apt update
 
 sudo apt install -y nodejs
