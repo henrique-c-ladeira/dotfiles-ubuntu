@@ -22,5 +22,9 @@
       command: ./setup/jdk
       stdout: true
       stderr: true
+    - 
+      command: ./setup/docker
+      stdout: true
+      stderr: true
     - [sudo apt install bat, Installing bat...]
     - [sudo snap install --classic code, Installing Visual Code Studio...] 
