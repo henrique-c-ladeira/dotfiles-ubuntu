@@ -15,11 +15,11 @@
 
 - shell:
     - 
-      command: ./setup/node.zsh
+      command: ./setup/node
       stdout: true
       stderr: true
     - 
-      command: ./setup/jdk.zsh
+      command: ./setup/jdk
       stdout: true
       stderr: true
     - [sudo apt install bat, Installing bat...]
