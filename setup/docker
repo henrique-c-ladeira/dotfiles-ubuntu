@@ -4,5 +4,56 @@ echo "===DOCKER SETUP==="
 
 curl -sSl https://get.docker.com/ | sh
 
+sudo service docker start
 
-echo "Docker Version  ~~~> $(docker --version)"
+#############################################################################################
+# Get Docker Machine
+DOCKER_MACHINE_LATEST=$(curl -sS https://api.github.com/repos/docker/machine/releases/latest \
+| grep "tag_name" \
+| cut -d : -f 2 \
+| tr -d \" \
+| cut -d , -f 1 \
+| cut -d " " -f 2)
+
+if [ -z "$DOCKER_MACHINE_LATEST" ]; then
+    DOCKER_MACHINE_LATEST="v0.16.2"
+else
+    echo 'We have successfully fetch latest version for docker-machine from GitHub API.'
+fi
+
+echo "Installing docker-machine version:"
+echo $DOCKER_MACHINE_LATEST
+base=https://github.com/docker/machine/releases/download/$DOCKER_MACHINE_LATEST
+curl -L $base/docker-machine-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-machine
+sudo chmod +x /usr/local/bin/docker-machine
+
+#############################################################################################
+# Get Docker Compose
+DOCKER_COMPOSE_LATEST=$(curl -sS https://api.github.com/repos/docker/compose/releases/latest \
+| grep "tag_name" \
+| cut -d : -f 2 \
+| tr -d \" \
+| cut -d , -f 1 \
+| cut -d " " -f 2)
+
+if [ -z "$DOCKER_COMPOSE_LATEST" ]; then
+    DOCKER_COMPOSE_LATEST="v1.29.2"
+else
+    echo 'We have successfully fetch latest version for docker-compose from GitHub API.'
+fi
+
+echo "Installing docker-compose version:"
+echo $DOCKER_COMPOSE_LATEST
+
+base=https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_LATEST
+echo $base
+mkdir temp\~
+curl -L $base/docker-compose-$(uname -s)-$(uname -m) -o ./temp~/docker-compose 
+sudo mv ./temp~/docker-compose /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+rm -rf ./temp\~
+#############################################################################################
+echo "$(docker --version)"
+echo "Docker Machine Version  ~~~> $(docker-machine --version)"
+echo "Docker Compose Version  ~~~> $(docker-compose --version)"
