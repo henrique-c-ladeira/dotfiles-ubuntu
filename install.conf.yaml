@@ -2,29 +2,27 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-#    ~/.vim:
+    #    ~/.vim:
     ~/.zshrc:
     ~/.gitconfig:
 
 - create:
     - ~/dev
-    - ~/Android/Sdk  
+    - ~/Android/Sdk
 
 - shell:
-    - 
-      command: ./setup/node
+    - command: ./setup/node
       stdout: true
       stderr: true
-    - 
-      command: ./setup/jdk
+    - command: ./setup/jdk
       stdout: true
       stderr: true
-    - 
-      command: ./setup/docker
+    - command: ./setup/docker
       stdout: true
       stderr: true
+    - [sudo snap install dbeaver-ce, Installing DBeaver Database Manager...]
     - [sudo apt install bat, Installing bat...]
-    - [sudo snap install --classic code, Installing Visual Code Studio...] 
+    - [sudo snap install --classic code, Installing Visual Code Studio...]

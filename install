@@ -2,6 +2,8 @@
 
 set -e
 
+sudo apt update; sudo apt install git zsh vim curl -y
+
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 

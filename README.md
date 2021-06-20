@@ -7,10 +7,6 @@ If you want to use it as is some tweaks might be necessary as there are hard cod
 Like it? 	&#11088; it.
 
 ## Quick Setup
-Before install
-```
-sudo apt update; sudo apt install git zsh vim curl -y
-```
 Clone repository
 ```
 git clone https://github.com/henrique-c-ladeira/dotfiles-ubuntu ~/.dotfiles
