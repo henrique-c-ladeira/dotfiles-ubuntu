@@ -18,7 +18,7 @@ DOCKER_MACHINE_LATEST=$(curl -sS https://api.github.com/repos/docker/machine/rel
 if [ -z "$DOCKER_MACHINE_LATEST" ]; then
     DOCKER_MACHINE_LATEST="v0.16.2"
 else
-    echo 'We have successfully fetch latest version for docker-machine from GitHub API.'
+    echo 'We have successfully fetched the latest version for docker-machine from GitHub API.'
 fi
 
 echo "Installing docker-machine version:"
