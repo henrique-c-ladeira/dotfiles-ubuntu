@@ -24,5 +24,5 @@
       stdout: true
       stderr: true
     - [sudo snap install dbeaver-ce, Installing DBeaver Database Manager...]
-    - [sudo apt install bat, Installing bat...]
+    - [sudo apt install bat -y, Installing bat...]
     - [sudo snap install --classic code, Installing Visual Code Studio...]
