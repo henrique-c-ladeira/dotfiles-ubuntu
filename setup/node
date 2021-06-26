@@ -6,6 +6,8 @@ sudo apt update
 
 sudo apt install -y nodejs
 
+sudo apt install -y npm
+
 sudo npm install -g n
 
 sudo n lts
