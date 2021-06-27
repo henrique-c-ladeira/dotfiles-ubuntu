@@ -5,6 +5,7 @@ export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 alias ll='ls -AlFh'
 alias cat='batcat'
 alias emu="emulator -avd Pixel_3a_API_30_x86"
+alias emu-clean="emulator -avd Pixel_3a_API_30_x86 -wipe-data"
 
 # Functions
 function mkcd () {
